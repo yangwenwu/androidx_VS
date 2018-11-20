@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 搜索输入框 -->
+    <RelativeLayout
+        android:id="@+id/search_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#171616">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:text="Cancel"
+            android:textColor="#ffffff"
+            android:textSize="15.4sp"
+            />
+
+        <com.lemon.video.utils.ClearEditText
+            android:id="@+id/search_edt"
+            android:layout_width="match_parent"
+            android:layout_height="33.3dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/cancel"
+            android:background="@drawable/search_edittext_bg"
+            android:drawableLeft="@mipmap/search_meeting_icon"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="Video name"
+            android:paddingLeft="10dp"
+            android:paddingRight="6.66dp"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#999999"
+            android:textSize="13.4sp">
+
+            <requestFocus />
+            <!-- android:layout_centerVertical="true"-->
+        </com.lemon.video.utils.ClearEditText>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnableFooterFollowWhenLoadFinished="true"
+            app:srlEnableScrollContentWhenLoaded="true">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:id="@+id/classicheader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlClassicsSpinnerStyle="Translate" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="visible" />
+            <!--  android:layout_height="fill_parent" -->
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlClassicsSpinnerStyle="Translate" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <include
+            android:id="@+id/empty_view"
+            layout="@layout/search_emptyview"
+            android:visibility="gone"></include>
+
+        <FrameLayout
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:visibility="gone">
+            <!-- android:background="@null" -->
+            <!--   注意这里没有设置它的背景色-->
+            <ProgressBar
+                android:id="@+id/loading_progress"
+                android:layout_width="@dimen/progress_width_height"
+                android:layout_height="@dimen/progress_width_height"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/frame_iphone_loading2" />
+            <!-- android:indeterminateDrawable="@drawable/frame_iphone_loading"-->
+
+            <LinearLayout
+                android:id="@+id/result_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/load_image_id"
+                    android:layout_width="106dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/connection_error" />
+
+                <TextView
+                    android:id="@+id/text_and_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="Connection Error"
+                    android:textColor="#9b9b9b"
+                    android:textSize="19.2sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/detail_refresh_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="@string/net_retry"
+                    android:textColor="@color/news_detail_assist"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/refresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginRight="46dip"
+                    android:layout_marginTop="26dp"
+                    android:background="@drawable/text_bt_bg"
+                    android:gravity="center"
+                    android:text="@string/net_retry"
+                    android:textColor="#9b9b9b"
+                    android:textSize="19.2sp" />
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="4dp">
+        <ImageView
+            android:id="@+id/video_image"
+            android:layout_width="134dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:src="@mipmap/news_big_default"
+            android:visibility="visible"
+           />
+        </androidx.cardview.widget.CardView>
+        <!-- android:layout_width="109dp"
+            android:layout_height="68dp"  -->
+        <RelativeLayout
+            android:id="@+id/rl_containers"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/video_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:letterSpacing="-0.02"
+                android:maxLines="3"
+
+                android:textSize="14sp"
+                android:textColor="#161616"
+                android:lineSpacingExtra="3.8sp"
+                tools:text="Sobhan, the Old Man and his Poems " />
+
+            <TextView
+                android:id="@+id/video_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textSize="9.6sp"
+                android:textColor="#009fe8"
+                android:letterSpacing="0.05"
+                tools:text="HONG KONG BY NIGHT" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1a262b2e"/>
+
+</LinearLayout>

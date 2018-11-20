@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#171616">
+        <!--android:background="@mipmap/top_title_bg" @drawable/statubar_shape -->
+        <TextView
+            android:id="@+id/category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:letterSpacing="0.01"
+            android:text="Change password"
+            android:textColor="#ffffff"
+            android:textSize="21.1sp" />
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="@string/back_bt"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/back_arrow3"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/old_psw"
+                android:layout_marginTop="50dp"
+                style="@style/baseEditTextView"
+                android:hint="old password"
+                android:maxLength="16"
+                android:inputType="textPassword"/>
+
+            <TextView
+                style="@style/baseLoginTextView"/>
+            <EditText
+                android:id="@+id/newpsw1"
+                style="@style/baseEditTextView"
+                android:hint="new password"
+                android:maxLength="16"
+                android:inputType="textPassword"/>
+
+            <TextView
+                style="@style/baseLoginTextView"/>
+            <EditText
+                android:id="@+id/newpsw2"
+                style="@style/baseEditTextView"
+                android:hint="confirm new password"
+                android:maxLength="16"
+                android:inputType="textPassword"/>
+
+            <TextView
+                style="@style/baseLoginTextView"/>
+        </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/submit_bt"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:textSize="15.4sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:textColor="#161616"
+        android:gravity="center"
+        android:text="Save changes"
+        android:background="@drawable/text_bt_bg"/>
+
+    </RelativeLayout>
+</LinearLayout>

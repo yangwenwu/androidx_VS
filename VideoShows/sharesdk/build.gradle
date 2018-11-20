@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "UMENG_APPKEY", '"5b3f347ca40fa35473000051"'
+            buildConfigField "String", "UMENG_CHANNEL", '"HK_video"'
+            buildConfigField "String", "WECHAT_APPKEY", '"wxb53cc8df037de602"'
+            buildConfigField "String", "WECHAT_APPSCECRET", '"7637db23798e83b1aa52d4a8a4b6b470"'
+//            buildConfigField "String", "TWITTER_APPKEY", '"4gJpDfTN0nQTjIlbFX3iVXC2z"'
+//            buildConfigField "String", "TWITTER_APPSCECRET", '"jedy0Ju8iqd3cv4qfDmBealiI15EgKJpc4VhYfnEIopXaLEhdk"'
+//            resValue "string", "facebook_app_id", "285583215282832"
+        }
+        release {
+            buildConfigField "String", "UMENG_APPKEY", '"5b3f347ca40fa35473000051"'
+            buildConfigField "String", "UMENG_CHANNEL", '"HK_video"'
+            buildConfigField "String", "WECHAT_APPKEY", '"wxb53cc8df037de602"'
+            buildConfigField "String", "WECHAT_APPSCECRET", '"7637db23798e83b1aa52d4a8a4b6b470"'
+//            buildConfigField "String", "TWITTER_APPKEY", '"4gJpDfTN0nQTjIlbFX3iVXC2z"'
+//            buildConfigField "String", "TWITTER_APPSCECRET", '"jedy0Ju8iqd3cv4qfDmBealiI15EgKJpc4VhYfnEIopXaLEhdk"'
+//            resValue "string", "facebook_app_id", "285583215282832"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation('androidx.appcompat:appcompat:1.0.2') {
+        transitive = true
+    }
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
+    implementation('androidx.recyclerview:recyclerview:1.0.0') {
+        transitive = true
+    }
+    implementation 'com.umeng.sdk:common:1.5.0'
+    implementation 'com.umeng.sdk:debug:1.0.0'
+    api 'com.umeng.sdk:analytics:7.5.0'
+    api 'com.umeng.sdk:share-core:6.9.1'
+    api 'com.umeng.sdk:share-wechat:6.9.1'
+
+//    api files('libs/umeng-share-facebook-6.9.1.jar')
+//    api files('libs/umeng-share-gplus-6.9.1.jar')
+//    api files('libs/umeng-share-instagram-6.9.1.jar')
+    implementation files('libs/volley.jar')
+//    api files('libs/umeng-share-linkedin-6.9.1.jar')
+//    api files('libs/umeng-share-twitter-6.9.1.jar')
+}

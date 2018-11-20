@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/nav_back"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:contentDescription="@string/back_bt"
+            android:src="@mipmap/back_arrow2" />
+
+        <!-- android:paddingLeft="15dp"
+                    android:paddingRight="20dp" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="#333333"
+            android:textSize="19.2sp" />
+
+        <TextView
+            android:id="@+id/profile_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:text=""
+            android:textColor="#3793ff"
+            android:textSize="15.4sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e7e7e7"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/email_account"
+            style="@style/baseEditTextView"
+            android:layout_gravity="center"
+            android:hint="E-mail" />
+
+        <TextView
+            android:id="@+id/line"
+            style="@style/baseLoginTextView"
+            android:layout_below="@id/email_account" />
+
+        <TextView
+            android:id="@+id/send_psw"
+            android:layout_width="192dp"
+            android:layout_height="43dp"
+            android:layout_below="@id/line"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/text_bt_bg"
+            android:gravity="center"
+            android:text="Send Password"
+            android:textColor="#161616"
+            android:textSize="15.4sp" />
+    </RelativeLayout>
+</LinearLayout>

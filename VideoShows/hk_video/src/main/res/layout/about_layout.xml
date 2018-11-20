@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/navigation_color" >
+
+        <ImageView
+            android:id="@+id/nav_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:contentDescription="@string/back_bt"
+            android:src="@mipmap/back_arrow3" />
+
+           <!-- android:src="@mipmap/arrow_left" />-->
+<!-- android:paddingLeft="15dp"
+            android:paddingRight="20dp" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="About us"
+            android:textColor="@color/white"
+            android:textSize="19.2sp" />
+
+        <TextView
+            android:id="@+id/profile_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:text=""
+            android:textColor="#3793ff"
+            android:textSize="15.4sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e7e7e7" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv1_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="15dp"
+                android:text="China Daily Hong Kong"
+                android:textSize="21.1sp"
+                android:textColor="#161616"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv1_content1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="@string/about_l"
+                style="@style/aboutUsTextView"
+                />
+<!-- android:textColor="@color/black"  android:textSize="15sp" -->
+
+            <TextView
+                android:id="@+id/tv1_content2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="@string/about_a"
+                style="@style/aboutUsTextView" />
+
+            <TextView
+                android:id="@+id/tv1_content3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="@string/about_f"
+                style="@style/aboutUsTextView"/>
+
+            <TextView
+                android:id="@+id/tv1_content4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="@string/about_t"
+                style="@style/aboutUsTextView"/>
+
+            <TextView
+                android:id="@+id/tv2_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="15dp"
+                android:text="China Daily Asia Weekly"
+                android:textSize="21.1sp"
+                android:textColor="#161616"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv2_content1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="@string/about_lr"
+                style="@style/aboutUsTextView"/>
+
+            <TextView
+                android:id="@+id/tv2_content2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="@string/about_te"
+                style="@style/aboutUsTextView"/>
+
+            <TextView
+                android:id="@+id/tv2_content3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="@string/about_as"
+                style="@style/aboutUsTextView" />
+
+            <TextView
+                android:id="@+id/tv2_content4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="@string/about_at"
+                style="@style/aboutUsTextView" />
+
+            <TextView
+                android:id="@+id/tv3_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="15dp"
+                android:text="China Daily Asia Leadership Roundtable"
+                android:textSize="21.1sp"
+                android:textColor="#161616"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv3_content1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="@string/about_tc"
+                style="@style/aboutUsTextView" />
+
+            <TextView
+                android:id="@+id/tv3_content2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="@string/about_tcd"
+                style="@style/aboutUsTextView" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

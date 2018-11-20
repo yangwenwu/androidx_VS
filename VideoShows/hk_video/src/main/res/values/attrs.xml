@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FancyCoverFlow">
+        <attr name="unselectedAlpha" format="float" />
+        <attr name="unselectedSaturation" format="float" />
+        <attr name="unselectedScale" format="float" />
+        <attr name="maxRotation" format="integer" />
+        <attr name="scaleDownGravity" format="float" />
+        <attr name="actionDistance" format="integer">
+            <enum name="auto" value="2147483647" />
+        </attr>
+    </declare-styleable>
+    <!-- News Detail -->
+    <declare-styleable name="NewsDetailHeader">
+        <attr name="left_btn" format="reference" />
+        <attr name="header_tv" format="reference" />
+        <attr name="right_btn" format="reference" />
+    </declare-styleable>
+    <!-- 圆形控件 -->
+    <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color"></attr>
+    </declare-styleable>
+    <!-- 圆形 -->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <!-- kayika -->
+    <declare-styleable name="verticaltextview">
+        <attr name="text" format="string" />
+        <attr name="verticaltextColor" format="reference|color" />
+        <attr name="verticaltextSize" format="reference|dimension" />
+        <attr name="direction">
+            <enum name="uptodown" value="0" />
+            <enum name="downtoup" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="CameraPreference">
+        <attr name="title" format="string" />
+    </declare-styleable>
+    <declare-styleable name="ListPreference">
+        <attr name="key" format="string" />
+        <attr name="defaultValue" format="string|reference" />
+        <attr name="entryValues" format="reference" />
+        <attr name="entries" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="IconIndicator">
+        <attr name="icons" format="reference" />
+        <attr name="modes" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="IconListPreference">
+
+        <!-- If a preference does not have individual icons for each entry, it can has a single icon to represent it. -->
+        <attr name="singleIcon" format="reference" />
+        <attr name="icons" />
+        <attr name="largeIcons" format="reference" />
+        <attr name="images" format="reference" />
+    </declare-styleable>
+
+    <!-- 设置旋转菜单对应的第一张图片 -->
+    <declare-styleable name="ChannelRoundView">
+        <attr name="menuStart" format="reference" />
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="titleTextColor" format="color" />
+        <attr name="pctTextSize" format="dimension" />
+        <attr name="pctTextColor" format="color" />
+    </declare-styleable>
+    
+    <!-- 栏目滚动view设置最大拉伸距离跟阻尼 -->
+    <declare-styleable name="ChannelScrollview">
+        <attr name="maxLength" format="integer"/>
+        <attr name="scrollRatio" format="float"/>
+    </declare-styleable>
+
+    <!-- 天气选择城市点击显示波纹效果 -->
+     <declare-styleable name="MaterialLayout">
+
+        <attr name="alpha_step" format="integer" />
+        <attr name="framerate" format="integer" />
+        <attr name="duration" format="integer" />
+        <attr name="color" format="color" />
+        <attr name="scale" format="float" />
+    </declare-styleable>
+    <!-- <attr name="alpha" format="integer" />-->
+
+    <attr name="entrySummaries" format="reference" />
+
+    <declare-styleable name="IjkListPreference">
+        <attr name="entrySummaries" />
+    </declare-styleable>
+
+
+    <declare-styleable name="PagerSlidingTabStrip1">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps"  format="boolean" />
+        <attr name="zmsTabTextSize"   format="dimension" />
+        <attr name="zmsTabTextColor"  format="color" />
+        <attr name="zmsSelectedTabTextSize"   format="dimension" />
+        <attr name="zmsSelectedTabTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="BannerView">
+        <!-- 是否支持循环, 默认 true -->
+        <attr name="bvIsLoop" format="boolean"/>
+        <!-- 是否支持自动滚动, 默认 true -->
+        <attr name="bvIsAuto" format="boolean"/>
+        <!-- 滚动延时, 默认5000ms -->
+        <attr name="bvDelay" format="integer"/>
+        <!-- 滚动间隔, 默认5000ms -->
+        <attr name="bvInterval" format="integer"/>
+        <!-- 高宽比(height/width)-->
+        <attr name="bvAspectRatio" format="float"/>
+
+        <!-- 底部背景条颜色, 默认透明 -->
+        <attr name="bvBarColor" format="color"/>
+        <!-- 底部背景条在滚动到最后一个item时是否可见, 默认 true -->
+        <attr name="bvBarVisibleWhenLast" format="boolean"/>
+
+        <!-- 底部背景条padding, 默认10dp -->
+        <attr name="bvBarPaddingLeft" format="dimension"/>
+        <attr name="bvBarPaddingTop" format="dimension"/>
+        <attr name="bvBarPaddingRight" format="dimension"/>
+        <attr name="bvBarPaddingBottom" format="dimension"/>
+
+        <!-- 标题文字颜色, 默认 #ffffff -->
+        <attr name="bvTitleColor" format="color"/>
+        <!-- 标题文字大小, 默认 14sp -->
+        <attr name="bvTitleSize" format="dimension"/>
+        <!-- 标题是否可见, 默认 false  -->
+        <attr name="bvTitleVisible" format="boolean"/>
+
+
+        <!-- 指示器是否可见, 默认 auto  -->
+        <attr name="bvIndicatorVisible" format="integer">
+            <enum name="auto" value="0"/>
+            <enum name="always" value="1"/>
+            <enum name="never" value="2"/>
+        </attr>
+
+        <!-- 指示器位置, 默认 center-->
+        <attr name="bvIndicatorGravity">
+            <enum name="center" value="17"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+        </attr>
+
+        <!-- 指示器项的 宽度/高度/间距, 默认 6dp -->
+        <attr name="bvIndicatorWidth" format="dimension"/>
+        <attr name="bvIndicatorHeight" format="dimension"/>
+        <attr name="bvIndicatorGap" format="dimension"/>
+
+        <!-- 指示器未选中颜色, 默认 #88ffffff  -->
+        <attr name="bvIndicatorColor" format="color"/>
+        <!-- 指示器选中颜色, 默认 #ffffff -->
+        <attr name="bvIndicatorColorSelected" format="color"/>
+
+        <!-- 指示器未选中drawable资源 -->
+        <attr name="bvIndicatorDrawable" format="reference"/>
+        <!-- 指示器选中drawable资源 -->
+        <attr name="bvIndicatorDrawableSelected" format="reference"/>
+    </declare-styleable>
+</resources>

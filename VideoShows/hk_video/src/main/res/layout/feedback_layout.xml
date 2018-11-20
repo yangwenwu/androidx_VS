@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/navigation_color">
+
+        <ImageView
+            android:id="@+id/nav_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="19.2dp"
+            android:contentDescription="@string/back_bt"
+            android:src="@mipmap/back_arrow3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:text="Feedback"
+            android:textColor="@color/white"
+            android:textSize="19.2sp" />
+
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="16.3sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e7e7e7" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="9.6dp"
+                    android:background="#f5f5f5" />
+
+                <EditText
+                    android:id="@+id/feedback_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="145dp"
+                    android:background="#ffffff"
+                    android:cursorVisible="true"
+                    android:gravity="top"
+                    android:hint="We are glad to hear from you"
+                    android:lineSpacingMultiplier="1.13"
+                    android:maxLength="500"
+                    android:paddingLeft="19.2dp"
+                    android:paddingRight="19.2dp"
+                    android:paddingTop="11dp"
+                    android:textColor="#262b2e"
+                    android:textColorHint="#999999"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="15.4sp" />
+
+                <TextView
+                    android:id="@+id/user_feedback_num"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:background="#ffffff"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="12.5dp"
+                    android:text="0/500"
+                    android:textColor="#999999"
+                    android:textSize="11.5sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="9.6dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="9.6dp"
+                    android:background="#f5f5f5" />
+
+                <EditText
+                    android:id="@+id/feedback_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dp"
+                    android:background="#ffffff"
+                    android:cursorVisible="true"
+                    android:gravity="center_vertical|left"
+                    android:hint="Please leave your e-mail (optional)"
+                    android:letterSpacing="0.01"
+                    android:paddingLeft="19.2dp"
+                    android:paddingRight="12.5dp"
+                    android:singleLine="true"
+                    android:textColor="#262b2e"
+                    android:textColorHint="#999999"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="15.4sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="#20f4f4f4"
+            android:visibility="gone">
+            <!-- android:layout_marginTop="70dp"-->
+            <!--   注意这里没有设置它的背景色-->
+            <ProgressBar
+                android:id="@+id/loading_progress"
+                android:layout_width="@dimen/progress_width_height"
+                android:layout_height="@dimen/progress_width_height"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/frame_iphone_loading2" />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+20180504 bugList
+
+1.搜索列表上滑下滑闪退      修复
+
+2.分享有的地址有问题        暂时不改
+20180524  BugList
+1.分享地址
+      https://www.chinadailyhk.com/articles/8/235/132/1527039912966.html?newsId=当前页面稿件ID
+      https://www.chinadailyhk.com/subjects/video/2725/index.html?newsId=当前页面视频ID
+      https://www.chinadailyhk.com/subjects/video/2725/index.html?play_url=/articles/254/78/137/1516348316400.json
+
+2.	https://www.chinadailyhk.com/articles/8/235/132/1527039912966.html?newsId=34343
+
+3.图片加载框架升级           完成
+
+4.版本更新，升级通知         已改，待测试
+
+5.将整个完整工程上传到svn    完成
+
+6.更换头像问题适配           修复
+
+20180606 BugList
+1.分享需要优化
+
+https://api.cdeclips.com/hknews-api/selectVideoHome
+
+20180823 BugList
+1.屏蔽无障碍邮箱链接    已屏蔽
+
+
+20180914  BugList
+1.tab中的 第一个，第二个已经改好
+
+2.MeFragment里面还有报错，没有完全弄好，暂时继续使用java  MineFragment
+
+3.MineFragment 里面的修改头像已经处理好
+
+4.
+
+
+20180918 BugList
+1.搜索模块已经处理好,光标的显示与隐藏也已经处理好
+2.主页列表的缓存处理,分类fragment 逻辑已经处理
+3.主页和分类fragment逻辑的第一次安装无网络需要测试  已经处理
+4.多余的包处理，特别是分享和登录
+5.优化激光推送，视频播放器
+
+20180919 BugList
+1.视频详情播放器更换，优化
+2.视频详情里面的评论时间需要优化处理，图像需要显示出来
+3.视频详情， 当用户没有登录，键盘弹出后跳转到登录界面，需要先关闭键盘，然后再跳转
+https://api.cdeclips.com/videoImages/uploadfile/2018/09/14/16/9db97573-a648-4d94-9880-0ccba4f661c3.png
+https://api.cdeclips.com/hknews-api/videoImages/uploadfile/2018/09/14/16/9db97573-a648-4d94-9880-0ccba4f661c3.png
+
+https://api.cdeclips.com/videoImages/uploadfile/2018/09/20/11/7c3dcec4-0b46-4736-b349-bac5eaf4dd83.png
+/videoImages/uploadfile/2018/09/14/16/9db97573-a648-4d94-9880-0ccba4f661c3.png
+
+明日问题  20180920 BugList
+1.评论人的图片的地址路径到底是多少,目前是不正确的 videoImages/uploadfile/2018/09/14/16/9db97573-a648-4d94-9880-0ccba4f661c3.png  后台已经解决
+2.一次性删除多条收藏总是失败      后台已解决
+3.刚刚发布的评论，时间显示不对     已改
+4.需要全面测试无网络的情况是否崩溃  已测试
+
+20180921 BugList
+1.买保温水壶                已购买
+2.交管理费                  已交
+3.分享中mob登录去掉logo     去掉了
+4.登陆中键盘的弹出挡住验证码的输入问题   已改
+
+20180923
+1.隐藏下拉刷新的时间     隐藏
+2.去除xutils jar包       已经去除其他的，只有版本升级这里了
+
+20180924 BugList
+1.更换下载安装包的工具
+2.优化视频地址，优先播放YouTube，然后腾讯云    解决
+3.检查公共列表上拉下拉逻辑问题，检查，视频详情的请求失败的问题
+
+20180925 BugList  RoundTable
+1.去掉顶部轮播图     解决
+
+20180925 BugList
+1.列表的最后一个item   底部间距调整   解决
+2.登录中的点击按钮点击效果    解决
+
+20180926 BugList
+1.分享的时候的照片权限检查
+2.图片加载的大小进行优化
+
+https://api.cdeclips.com/hknews-api/
+
+20181022 BugList
+1.解决版本更新接口的问题
+  有的栏目没有数据
+  https://api.cdeclips.com/hknews-api/selectNewsList?subjectCode=movie_corner&currentPage=1&dataType=3
+2.去除多余无用的权限   没找到是哪个jar包导致的
+3.去掉google+分享
+
+
+
+
+
+
+
+
+
+
+

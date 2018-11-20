@@ -1,0 +1,168 @@
+{
+  "resCode": "200",
+  "resMsg": "success",
+  "resObject": [
+    {
+      "id": "0745549b-f858-4ae9-a84d-d5a9465b4b6c",
+      "code": "movie_corner",
+      "name": "Movie Corner",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/movie_corner/list_Vindex/2896/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/movie_corner.jpg"
+    },
+    {
+      "id": "0838b4ec-d16c-4449-9e72-45f1cb0992da",
+      "code": "seeing_sight",
+      "name": "Seeing Sights",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/seeing_sight/list_Vindex/2890/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/seeing_sight.jpg"
+    },
+    {
+      "id": "10828486-14fa-4380-b494-9f84f166b766",
+      "code": "china_dailydocs",
+      "name": "China Daily DOCS",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/china_dailydocs/list_Vindex/2887/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/china_dailydocs.jpg"
+    },
+    {
+      "id": "17fe245e-3c2b-4a7c-aa72-8cc9570a7b6f",
+      "code": "tech_china",
+      "name": "Tech China",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/tech_china/list_Vindex/2733/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/tech_china.jpg"
+    },
+    {
+      "id": "2103189f-b236-4ad9-9798-ae4dbd4f6d96",
+      "code": "hong_hong_by_night",
+      "name": "Fantastic",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/hong_hong_by_night/list_Vindex/2739/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/hong_hong_by_night.jpg"
+    },
+    {
+      "id": "3a0531f4-f561-4d95-8a7d-de6e1801c3c2",
+      "code": "design_asia",
+      "name": "Design Asia",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/design_asia/list_Vindex/2831/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/design_asia.jpg"
+    },
+    {
+      "id": "3c55edea-fd36-4ac0-a760-ca55b0183365",
+      "code": "d_campus",
+      "name": "D-Campus",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/d_campus/list_Vindex/2981/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/d_campus.jpg"
+    },
+    {
+      "id": "41d7ba6d-18bb-4a67-947d-f7bfa9776eb2",
+      "code": "biz_leader",
+      "name": "Yes But Why",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/biz_leader/list_Vindex/2734/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/biz_leader.jpg"
+    },
+    {
+      "id": "485aa4df-4fa6-4a7c-bdf4-73e958a8a81c",
+      "code": "hong_kong_enquirer",
+      "name": "Hong Kong Enquirer",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/hong_kong_enquirer/list_Vindex/2738/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/hong_kong_enquirer.jpg"
+    },
+    {
+      "id": "58f6d35e-a69a-4652-9001-8f5af516253c",
+      "code": "endangered_species",
+      "name": "Protected Species",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/endangered_species/list_Vindex/2741/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/endangered_species.jpg"
+    },
+    {
+      "id": "678563e4-b3e5-4738-8d84-92fec4e83923",
+      "code": "life_and_art",
+      "name": "Life and Art",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/life_and_art/list_Vindex/2740/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/life_and_art.jpg"
+    },
+    {
+      "id": "6feaa4b3-fe18-4ec8-9748-2772226bcfa0",
+      "code": "drone_and_phone",
+      "name": "Drone and Phone",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/drone_and_phone/list_Vindex/2736/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/drone_and_phone.jpg"
+    },
+    {
+      "id": "7ca5d886-16f3-4382-850e-85195e1b1316",
+      "code": "asia_featured",
+      "name": "Asia Featured",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/asia_featured/list_Vindex/2862/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/asia_featured.jpg"
+    },
+    {
+      "id": "8aa48f0b-fd5e-4c52-b8ed-d07be6d8456c",
+      "code": "girl_city",
+      "name": "Girl City",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/girl_city/list_Vindex/2735/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/girl_city.jpg"
+    },
+    {
+      "id": "9ea113bb-1eb8-49e3-84a9-367d6a32d81d",
+      "code": "urban_tales",
+      "name": "Urban Tales",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/urban_tales/list_Vindex/2732/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/urban_tales.jpg"
+    },
+    {
+      "id": "abac9100-e18b-4443-b3a3-be1d39fddfcc",
+      "code": "food_wander",
+      "name": "Food Wander",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/food_wander/list_Vindex/2893/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/food_wander.jpg"
+    },
+    {
+      "id": "adb46ff2-2a2d-4772-bcd3-102051afe70c",
+      "code": "taste_buds",
+      "name": "Taste Buds",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/taste_buds/list_Vindex/2984/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/taste_buds.jpg"
+    },
+    {
+      "id": "fc892cd4-434a-4618-91c3-643fa4af057e",
+      "code": "flavor_of_the_east",
+      "name": "360 Asia",
+      "focusUrl": "",
+      "jsonUrl": "/subjects/flavor_of_the_east/list_Vindex/2737/index.json",
+      "parentCode": "video",
+      "imageUrl": "https://api.cdeclips.com/ui/videoshow/flavor_of_the_east.jpg"
+    }
+  ]
+}

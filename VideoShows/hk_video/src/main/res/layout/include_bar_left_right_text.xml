@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/navigation_color">
+
+    <ImageView
+        android:id="@+id/bar_iv_left"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:contentDescription="@string/back_bt"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/back_arrow3" />
+
+    <TextView
+        android:id="@+id/bar_tv_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/my_bookmarks"
+        android:textColor="@color/white"
+        android:textSize="17.3sp"
+        />
+
+    <TextView
+        android:id="@+id/bar_tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:text="Edit"
+        android:textSize="13.9sp"
+        android:textColor="@color/white"
+        />
+</RelativeLayout>

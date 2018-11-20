@@ -1,0 +1,16 @@
+{
+  "resCode": "200",
+  "resMsg": "success",
+  "resObject": [
+    {
+      "id": "1",
+      "versionPackage": "com.lemon.video",
+      "versionCode": "2",
+      "versionName": "1.0",
+      "versionDesc": " 1.优化视频详情 2.优化登录 3.修复部分bug",
+      "apkPath": "https://www.vdoenglish.com/apk/hk_video-release.apk",
+      "versionDate": "2017-10-20",
+      "updateType": "0"
+    }
+  ]
+}

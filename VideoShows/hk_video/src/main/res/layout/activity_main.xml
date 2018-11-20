@@ -1,0 +1,30 @@
+<androidx.fragment.app.FragmentTabHost
+    android:id="@+id/tabhost"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:importantForAccessibility="no">
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"/>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            />
+<!-- android:layout_height="?attr/actionBarSize"  android:background="@color/color_body_bg"  android:background="#ffffff"-->
+    </LinearLayout>
+
+</androidx.fragment.app.FragmentTabHost>

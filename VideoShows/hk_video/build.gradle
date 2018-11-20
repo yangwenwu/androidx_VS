@@ -1,0 +1,211 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+
+apply plugin: 'com.mob.sdk'
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+MobSDK {
+    appKey "21bf0d644d754"
+    appSecret "f550580d9194c8f990c8122b10d4da7e"
+    ShareSDK {
+        version '3.2.1'
+        devInfo {
+            GooglePlus {
+                id 1
+                sortId 1
+                appId "821738096601-jsqpub6e55d7versqb5am4k7jrdk10cl.apps.googleusercontent.com"
+                callbackUri "http://www.chinadailyhk.com/"
+                shareByAppClient true
+                enable true
+            }
+            Facebook {
+                id 2
+                sortId 2
+                appKey "285583215282832"
+                appSecret "90aae2b83bbea0281ce414f452d54d12"
+                callbackUri "http://www.chinadailyasia.com"
+                shareByAppClient true
+                enable true
+            }
+
+            Twitter {
+                id 3
+                sortId 3
+                appKey "4gJpDfTN0nQTjIlbFX3iVXC2z"
+                appSecret "jedy0Ju8iqd3cv4qfDmBealiI15EgKJpc4VhYfnEIopXaLEhdk"
+                callbackUri "http://www.chinadailyhk.com/"
+                enable true
+            }
+        }
+    }
+}
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId "com.lemon.video"
+        minSdkVersion 21
+        targetSdkVersion 28
+//        versionCode 3
+//        versionName "1"
+//        versionCode 2
+//        versionName "1.1"
+//        versionName "1.0.1"
+//        versionCode 3
+//        versionName "1.0.1"
+//        versionCode 4
+//        versionName "1.0.2"
+//        versionCode 5
+//        versionName "1.0.3"
+        //20181012当前版本
+//        versionCode 6
+//        versionName "1.0.4"
+        //20181022当前版本
+        versionCode 7
+        versionName "1.0.5"
+
+        multiDexEnabled true
+
+        resConfig "en"
+
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("videoshows.keystore")
+            storePassword "123456"
+            keyAlias "videoshows"
+            keyPassword "123456"
+        }
+        release {
+            storeFile file("videoshows.keystore")
+            storePassword "123456"
+            keyAlias "videoshows"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "${project.name}-${name}-${defaultConfig.versionName}-${releaseTime()}.apk"
+            }
+        }
+
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+    }
+
+    productFlavors {
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v13'
+    }
+
+    implementation('androidx.appcompat:appcompat:1.0.2') {
+        transitive = true
+    }
+    implementation('androidx.constraintlayout:constraintlayout:2.0.0-alpha2') {
+        transitive = true
+    }
+    implementation('androidx.recyclerview:recyclerview:1.0.0') {
+        transitive = true
+    }
+    implementation('com.google.android.material:material:1.1.0-alpha01') {
+        transitive = true
+    }
+    implementation('androidx.cardview:cardview:1.0.0') {
+        transitive = true
+    }
+//    implementation ('com.alibaba:fastjson:1.2.16'){
+    implementation('com.alibaba:fastjson:1.1.58.android') {
+        transitive = true
+    }
+    //okHttp
+//    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
+    //配合okHttp使用
+//    implementation 'com.squareup.okio:okio:1.11.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.squareup.okio:okio:1.15.0'
+
+    implementation("com.github.bumptech.glide:glide:$glide_version") {
+        force = true
+    }
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+    implementation 'org.xutils:xutils:3.3.40'
+
+    api project(':sharesdk')
+
+    implementation 'com.aliyun.ams:alicloud-android-hotfix:3.1.9'
+
+    implementation project(':takephoto_library')
+
+    implementation 'com.google.firebase:firebase-core:16.0.5'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-5'
+    //这是java版本
+//    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+    //这是kotlin版本
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.21'
+
+    implementation 'cn.jzvd:jiaozivideoplayer:6.2.12'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.8.2'
+    implementation 'com.google.android.exoplayer:extension-okhttp:2.8.2'
+    implementation 'com.lzy.net:okgo:3.0.4'
+
+//    implementation 'cn.jzvd:jiaozivideoplayer:6.3.1'
+//    implementation 'com.google.android.exoplayer:exoplayer:2.7.1'
+
+    implementation 'com.gyf.immersionbar:immersionbar:2.3.2-beta01'
+}
+repositories {
+    mavenCentral()
+}

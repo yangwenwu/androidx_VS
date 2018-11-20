@@ -1,0 +1,10 @@
+{
+  "resCode": "200",
+  "resMsg": "success",
+  "resObject": {
+    "nickName": "杨文武",
+    "headImage": "/videoImages/uploadfile/2018/09/20/11/2b9e2bcb-8aa8-48b8-a87c-ee30f158d2fa.png",
+    "id": "29e722ff-73cb-11e8-a6b6-00155d033e1b",
+    "account": null
+  }
+}

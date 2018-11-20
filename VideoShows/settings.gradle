@@ -1,0 +1,1 @@
+include  ':hk_video', ':sharesdk', 'takephoto_library'
