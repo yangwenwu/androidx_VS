@@ -1,0 +1,29 @@
+{
+  "resCode": "200",
+  "resMsg": "success",
+  "resObject": {
+    "id": "46801c13-b021-4ed4-b980-239571b222bf",
+    "sourceId": "45014",
+    "subjectName": "Taste Buds",
+    "subjectCode": "taste_buds",
+    "type": null,
+    "headImage": "/attachments/image/3/18/68/426381_135114/426381_135114_800_500_jpg.jpg",
+    "title": "Taste  Buds  |  Modern  Chinese  Food",
+    "subTitle": null,
+    "leadTitle": null,
+    "text": null,
+    "description": "Joyce  and  Natasha  try  new  school  Chinese  food.  \r\n\r\nTODAY’S  MENU:  Beef  cheek,  Watermelon  and  Chili  sauce  (NV)  and  Seaweed  Okra  (V)\r\nFOOD  STOP:  John  Anthony,  Hong  Kong\r\nChef:  Saito  Chu\r\n\r\nJoyce  and  Natasha,  aka  #TasteBuds  are  taking  you  on  a  journey  to  the  world  of  #food  and  #drinks.\r\n\r\nFollow  us  @TasteBuds.mov  on  Instagram!\r\n#ChineseFood\r\n#JohnAnthony",
+    "source": null,
+    "htmlUrl": "/articles/21/220/16/1542599156935.html",
+    "jsonUrl": "/articles/244/156/46/1542599156933.json",
+    "publishTime": "November 19, 2018",
+    "fullPublishTime": "2018-11-19 11:43:34",
+    "author": "",
+    "dataId": "54015",
+    "dataType": 3,
+    "state": 1,
+    "videoOuterLink": "{\"inner\":{\"type\":\"tx\",\"url\":\"5285890783008667398\"},\"local\":{\"type\":\"\",\"url\":\"\"},\"outer\":{\"type\":\"ytb\",\"url\":\"Sub_fyMDPA4\"}}",
+    "txyUrl": "http://1252065688.vod2.myqcloud.com/d7dc3e4avodgzp1252065688/bd81649b5285890783008667398/3WirYVd9xjIA.mp4",
+    "ytbUrl": "Sub_fyMDPA4"
+  }
+}

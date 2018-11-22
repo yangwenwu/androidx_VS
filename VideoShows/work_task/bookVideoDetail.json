@@ -1,0 +1,29 @@
+{
+  "resCode": "200",
+  "resMsg": "success",
+  "resObject": {
+    "id": "70419e27-c3da-425a-a971-da0cb1505580",
+    "sourceId": "45013",
+    "subjectName": "Taste Buds",
+    "subjectCode": "taste_buds",
+    "type": null,
+    "headImage": "/attachments/image/12/198/220/426379_135113/426379_135113_800_500_jpg.jpg",
+    "title": "TASTE  BUDS  |  Brazilian-Japanese  street  food",
+    "subTitle": null,
+    "leadTitle": null,
+    "text": null,
+    "description": "Tasting  the  best  of  both  worlds  in  one  episode.  Plus,  you  get  to  meet  Natasha’s  new    bud.  Excited  much?  \r\n\r\nTODAY’S  MENU:  Coxinhas  de  frango  (NV)  and  Berinjela  (V)\r\nFOOD  STOP:  Uma  Nota,  Hong  Kong\r\nOWNER:  Alexis  Offe\r\n\r\nJoyce  and  Natasha,  aka  #TasteBuds  are  taking  you  on  a  journey  to  the  world  of  #food  and  #drinks.\r\n\r\nFollow  us  @TasteBuds.mov  on  Instagram!\r\n#Japanese\r\n#Brazilian  \r\n#Streetfood",
+    "source": null,
+    "htmlUrl": "/articles/28/154/176/1542598966245.html",
+    "jsonUrl": "/articles/211/41/81/1542598966243.json",
+    "publishTime": "November 19, 2018",
+    "fullPublishTime": "2018-11-19 11:38:35",
+    "author": "",
+    "dataId": "54014",
+    "dataType": 3,
+    "state": 1,
+    "videoOuterLink": "{\"inner\":{\"type\":\"tx\",\"url\":\"5285890782988456803\"},\"local\":{\"type\":\"\",\"url\":\"\"},\"outer\":{\"type\":\"ytb\",\"url\":\"qjJ8O9ZQzgk\"}}",
+    "txyUrl": "http://1252065688.vod2.myqcloud.com/d7dc3e4avodgzp1252065688/2f28917e5285890782988456803/nnQIQ4etTEIA.mp4",
+    "ytbUrl": "qjJ8O9ZQzgk"
+  }
+}

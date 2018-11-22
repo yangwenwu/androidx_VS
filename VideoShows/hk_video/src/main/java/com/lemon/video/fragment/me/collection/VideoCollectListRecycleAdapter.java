@@ -42,7 +42,7 @@ public class VideoCollectListRecycleAdapter extends VideoCollectRecycleAdapter {
     public VideoCollectListRecycleAdapter(Context context, List<TouTiaoListBean> mData, boolean isEditModel) {
         super(context, mData);
         this.isEditModel = isEditModel;
-//        setIselectedListener(iselectedListener);
+        setIselectedListener(iselectedListener);
     }
 
     @Override
@@ -67,6 +67,10 @@ public class VideoCollectListRecycleAdapter extends VideoCollectRecycleAdapter {
             if (isEditModel) {
                 final TouTiaoListBean ttlb = mData.get(position);
                 selected.ivSelected.setSelected(ttlb.isSelected());
+            }else{
+                final TouTiaoListBean ttlb = mData.get(position);
+                ttlb.setSelected(false);
+                selected.ivSelected.setSelected(false);
             }
         }
         super.onBindViewHolder(holder, position);

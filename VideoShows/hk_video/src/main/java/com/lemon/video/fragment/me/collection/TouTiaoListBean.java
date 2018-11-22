@@ -29,6 +29,22 @@ public class TouTiaoListBean implements Serializable{
     public String bigTitleImage;
     public String titleImage;
 
+    public String getBigTitleImage() {
+        return bigTitleImage;
+    }
+
+    public void setBigTitleImage(String bigTitleImage) {
+        this.bigTitleImage = bigTitleImage;
+    }
+
+    public String getTitleImage() {
+        return titleImage;
+    }
+
+    public void setTitleImage(String titleImage) {
+        this.titleImage = titleImage;
+    }
+
     public String getDataId() {
         return dataId;
     }

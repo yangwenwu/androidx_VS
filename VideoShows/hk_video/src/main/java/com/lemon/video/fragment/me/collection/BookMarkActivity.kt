@@ -267,15 +267,15 @@ class BookMarkActivity :BaseAppActivity(),VideoCollectListRecycleAdapter.Iselect
 
     private var itemClickListener= object : VideoCollectRecycleAdapter.OnItemClickListener {
         override fun OnItemClick(view: View, position: Int) {
-            val ttb = adapter?.mData?.get(position)//经过具体测试，这里应该是添加了一头和一尾，所以position需要-2
+            val ttb = adapter?.mData?.get(position)
             val homeNewsBean = HomeNewsBean()
             homeNewsBean.id = ttb?.getId()
+            homeNewsBean.title = ttb?.getTitle()
             homeNewsBean.subjectCode = ttb?.getSubjectCode()
-            homeNewsBean.bigTitleImage = ttb?.getBig_title_image()
-            homeNewsBean.titleImage = ttb?.getTitle_image()
+            homeNewsBean.bigTitleImage = ttb?.getBigTitleImage()
+            homeNewsBean.titleImage = ttb?.getTitleImage()
             homeNewsBean.dataId = ttb?.getDataId()
             homeNewsBean.description = ttb?.getDescription()
-            //            HomeNewsBean ttb = videoList.get(position);//经过具体测试，这里应该是添加了一头和一尾，所以position需要-2
             val subjectCode = ttb?.subjectCode
             Goto(subjectCode!!, homeNewsBean, VideoDetailActivity::class.java)
 

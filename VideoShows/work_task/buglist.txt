@@ -97,6 +97,13 @@ https://api.cdeclips.com/hknews-api/
 3.去掉google+分享
 
 
+20181121 BugList
+1.修复收藏列表点击进入详情崩溃空指针的问题
+2.修复收藏列表编辑和非编辑模式下切换选中归位的问题
+3.收藏列表数据为空时显示为空UI
+4.将项目改为androidx,最新系统
+
+https://api.cdeclips.com/hknews-api/searchCollect?userId=29e722ff-73cb-11e8-a6b6-00155d033e1b&type=2&currentPage=2
 
 
 

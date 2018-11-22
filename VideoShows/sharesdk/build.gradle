@@ -13,22 +13,16 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField "String", "UMENG_APPKEY", '"5b3f347ca40fa35473000051"'
-            buildConfigField "String", "UMENG_CHANNEL", '"HK_video"'
-            buildConfigField "String", "WECHAT_APPKEY", '"wxb53cc8df037de602"'
-            buildConfigField "String", "WECHAT_APPSCECRET", '"7637db23798e83b1aa52d4a8a4b6b470"'
-//            buildConfigField "String", "TWITTER_APPKEY", '"4gJpDfTN0nQTjIlbFX3iVXC2z"'
-//            buildConfigField "String", "TWITTER_APPSCECRET", '"jedy0Ju8iqd3cv4qfDmBealiI15EgKJpc4VhYfnEIopXaLEhdk"'
-//            resValue "string", "facebook_app_id", "285583215282832"
+            buildConfigField "String", "UMENG_APPKEY", '"11111111111111111111111111"'
+            buildConfigField "String", "UMENG_CHANNEL", '"111111"'
+            buildConfigField "String", "WECHAT_APPKEY", '"11111111111111111111"'
+            buildConfigField "String", "WECHAT_APPSCECRET", '"111111111111111111111111"'
         }
         release {
-            buildConfigField "String", "UMENG_APPKEY", '"5b3f347ca40fa35473000051"'
-            buildConfigField "String", "UMENG_CHANNEL", '"HK_video"'
-            buildConfigField "String", "WECHAT_APPKEY", '"wxb53cc8df037de602"'
-            buildConfigField "String", "WECHAT_APPSCECRET", '"7637db23798e83b1aa52d4a8a4b6b470"'
-//            buildConfigField "String", "TWITTER_APPKEY", '"4gJpDfTN0nQTjIlbFX3iVXC2z"'
-//            buildConfigField "String", "TWITTER_APPSCECRET", '"jedy0Ju8iqd3cv4qfDmBealiI15EgKJpc4VhYfnEIopXaLEhdk"'
-//            resValue "string", "facebook_app_id", "285583215282832"
+            buildConfigField "String", "UMENG_APPKEY", '"11111111111111111111111"'
+            buildConfigField "String", "UMENG_CHANNEL", '"1111111"'
+            buildConfigField "String", "WECHAT_APPKEY", '"111111111111111111111111"'
+            buildConfigField "String", "WECHAT_APPSCECRET", '"1111111111111111111111111111"'
         }
     }
 

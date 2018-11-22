@@ -4,15 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-//import android.support.annotation.NonNull;
-//import android.support.v7.widget.LinearLayoutManager;
-//import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
@@ -47,10 +46,8 @@ public class CollectionListActivity extends BaseAppActivity implements VideoColl
 
     private ImageView barIvLeft;
     private TextView barTvRight;
-    //    private XRecyclerView xrlList;
     private RecyclerView recyclerview;
     private SmartRefreshLayout refreshLayout;
-
 
     private TextView tvDelete;
 
@@ -178,27 +175,29 @@ public class CollectionListActivity extends BaseAppActivity implements VideoColl
         Commrequest.deLCollectionList(CollectionListActivity.this, userId, ids, new ResponseListener() {
             @Override
             public void onResponse(BaseJsonBean t, int code) {
-
                 JSONObject jsonObject = JSON.parseObject(t.object);
                 String resMsg = jsonObject.getString("resMsg");
                 if (resMsg.equals("success")) {
-                    JSONObject resObject = jsonObject.getJSONObject("resObject");
                     tvDelete.setText("Delete( " + 0 + " )");
                     page = 1;
-//                    if (noMore){
-//                        noMore = false;
-//                        xrlList.setLoadingMoreEnabled(true);
-//                    }
                     queryDate(1, true, true);
                 } else {
                     ToastUtils.showShort(CollectionListActivity.this, "Delete failed");
                 }
-
             }
 
             @Override
             public void onFailure(BaseJsonBean t, String errMessage) {
-                ToastUtils.showShort(CollectionListActivity.this, "Delete failed");
+                if (NetWorkUtil.isNetworkAvailable(CollectionListActivity.this)){
+                    Toast toast = Toast.makeText(CollectionListActivity.this, "Delete failed", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                }else{
+                    Toast toast = Toast.makeText(CollectionListActivity.this, "Connection Error", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                }
+
             }
         });
     }
@@ -230,7 +229,6 @@ public class CollectionListActivity extends BaseAppActivity implements VideoColl
                     if (delete) {
                         deleteOK = true;
                     }
-
                     JSONObject resObject = jsonObject.getJSONObject("resObject");
                     JSONArray jsonArray = resObject.getJSONArray("dateList");
                     List<TouTiaoListBean> SQLlist = new ArrayList<TouTiaoListBean>();
@@ -256,13 +254,11 @@ public class CollectionListActivity extends BaseAppActivity implements VideoColl
                             mCollectListRecycleAdapter.notifyDataSetChanged();
                             barTvRight.setVisibility(View.INVISIBLE);
                             tvDelete.setVisibility(View.GONE);
-//                        xrlList.setEmptyView(empty_view);
+                            empty_view.setVisibility(View.VISIBLE);
                             loading.setVisibility(View.GONE);
                         }else{
                             refreshLayout.finishLoadMore();
                         }
-
-
                     }
                 } else {
                     ToastUtils.showShort(CollectionListActivity.this, "Load failed");
@@ -326,6 +322,7 @@ public class CollectionListActivity extends BaseAppActivity implements VideoColl
                         barTvRight.setVisibility(View.INVISIBLE);
                         tvDelete.setVisibility(View.GONE);
 //                        xrlList.setEmptyView(empty_view);
+                        empty_view.setVisibility(View.VISIBLE);
                         loading.setVisibility(View.GONE);
                         mCollectListRecycleAdapter.notifyDataSetChanged();
                     }
@@ -340,7 +337,6 @@ public class CollectionListActivity extends BaseAppActivity implements VideoColl
                             queryList.add(touTiaoListBean);
                         }
                         barTvRight.setVisibility(View.VISIBLE);
-//                        xrlList.loadMoreComplete();
                         tbList.addAll(queryList);
                         loading.setVisibility(View.GONE);
                         mCollectListRecycleAdapter.notifyDataSetChanged();
@@ -356,11 +352,12 @@ public class CollectionListActivity extends BaseAppActivity implements VideoColl
                         loading.setVisibility(View.GONE);
                         mCollectListRecycleAdapter.notifyDataSetChanged();
                     }
+                    refreshLayout.finishLoadMore();
+
                     break;
             }
         }
     };
-
 
     /***
      * 没有缓存，加载失败
@@ -382,11 +379,19 @@ public class CollectionListActivity extends BaseAppActivity implements VideoColl
                     loading_progress.setVisibility(View.GONE);
                     result_view.setVisibility(View.VISIBLE);
                     ToastUtils.showShort(CollectionListActivity.this, getResources().getString(R.string.net_error));
+
+//                    runOnUiThread(new Runnable() {
+//
+//                        @Override
+//                        public void run() {
+//                            ToastUtils.showShort(CollectionListActivity.this, "ddddd");
+//                        }
+//                    });
+
                 }
             }
         });
     }
-
 
     @Override
     public void seleced(int count) {
@@ -394,20 +399,18 @@ public class CollectionListActivity extends BaseAppActivity implements VideoColl
         if (count > 0) tvDelete.setText("Delete ( " + count + " )");
     }
 
-
-    //    NewsRecycleAdapter.OnItemClickListener itemClickListener = new NewsRecycleAdapter.OnItemClickListener() {
     VideoCollectListRecycleAdapter.OnItemClickListener itemClickListener = new VideoCollectListRecycleAdapter.OnItemClickListener() {
         @Override
         public void OnItemClick(View view, int position) {
-            TouTiaoListBean ttb = mCollectListRecycleAdapter.mData.get(position);//经过具体测试，这里应该是添加了一头和一尾，所以position需要-2
+            TouTiaoListBean ttb = mCollectListRecycleAdapter.mData.get(position);
             HomeNewsBean homeNewsBean = new HomeNewsBean();
             homeNewsBean.id = ttb.getId();
+            homeNewsBean.title = ttb.getTitle();
             homeNewsBean.subjectCode = ttb.getSubjectCode();
-            homeNewsBean.bigTitleImage = ttb.getBig_title_image();
-            homeNewsBean.titleImage = ttb.getTitle_image();
+            homeNewsBean.bigTitleImage = ttb.getBigTitleImage();
+            homeNewsBean.titleImage = ttb.getTitleImage();
             homeNewsBean.dataId = ttb.getDataId();
             homeNewsBean.description = ttb.getDescription();
-//            HomeNewsBean ttb = videoList.get(position);//经过具体测试，这里应该是添加了一头和一尾，所以position需要-2
             String subjectCode = ttb.subjectCode;
             Goto(subjectCode, homeNewsBean, VideoDetailActivity.class);
 
